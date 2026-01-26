@@ -18,7 +18,7 @@ function criaObjetoUsuario(nome, cpf, dataNasc) {
 
     return criarResposta({
         status: true,
-        code: 201, // Created
+        code: 201,
         message: 'Usuário criado com sucesso',
         data: novoUsuario
     });
