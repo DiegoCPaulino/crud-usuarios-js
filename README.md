@@ -50,6 +50,7 @@ Trata-se de um projeto **educacional e técnico**, pensado para consolidar funda
 
 ## 🗂️ Estrutura do Projeto
 
+```
 ├── src
 │   ├── dados
 │   │   └── usuarios.js
@@ -76,8 +77,7 @@ Trata-se de um projeto **educacional e técnico**, pensado para consolidar funda
 │   └── (testes unitários em desenvolvimento)
 │
 └── README.md
-
----
+```
 
 ## 🧩 Arquitetura e Decisões Técnicas
 
