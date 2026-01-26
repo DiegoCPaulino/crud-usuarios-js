@@ -1,4 +1,4 @@
-const { usuarios, usuariosDeletados } = require("../usuarios");
+const { usuarios, usuariosDeletados } = require("../dados/usuarios");
 const { buscarUsuarioID } = require("./atualizarUsuario")
 const { formatarCPF } = require("../utils/formatacoes")
 const { criarResposta } = require("../utils/criarRespostas")

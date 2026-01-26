@@ -1,4 +1,4 @@
-const { usuarios } = require('../usuarios')
+const { usuarios } = require("../dados/usuarios");
 const { criarResposta } = require("../utils/criarRespostas")
 
 function ordemID(arrUsuarios) {

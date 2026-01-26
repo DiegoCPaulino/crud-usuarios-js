@@ -1,4 +1,4 @@
-const { usuarios } = require("../usuarios");
+const { usuarios } = require("../dados/usuarios");
 const { validaNome, ERROS_NOME } = require('../validacoes/nome')
 const { criarResposta } = require("../utils/criarRespostas")
 

@@ -3,7 +3,7 @@ const { validaCPF, ERROS_CPF } = require('../validacoes/cpf')
 const { validaDataNasc, ERROS_DATA_NASC } = require('../validacoes/dataNasc')
 const { geraId } = require('../geradorId')
 const { formataUsuario } = require("../utils/formatacoes")
-const { usuarios } = require('../usuarios')
+const { usuarios } = require("../dados/usuarios");
 const { criarResposta } = require("../utils/criarRespostas")
 
 function criaObjetoUsuario(nome, cpf, dataNasc) {
