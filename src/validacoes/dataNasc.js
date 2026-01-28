@@ -114,15 +114,14 @@ function ajustaMesParaJS(arrDataNasc) {
     return copiaArr;
 }
 
-function limiteIdade(dataNasc) {
-    const idade = calculaIdade(dataNasc);
+function limiteIdade(dataNasc, hoje = new Date()) {
+    const idade = calculaIdade(dataNasc, hoje);
     return idade >= 18 && idade <= 110;
 }
 
-function calculaIdade(dataNasc) {
+function calculaIdade(dataNasc, hoje = new Date()) {
     const [diaNasc, mesNasc, anoNasc] = converteData(dataNasc);
 
-    const hoje = new Date();
     const diaAtual = hoje.getDate();
     const mesAtual = hoje.getMonth() + 1;
     const anoAtual = hoje.getFullYear();
