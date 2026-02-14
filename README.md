@@ -98,48 +98,79 @@ Trata-se de um projeto **educacional e técnico**, pensado para consolidar funda
 
 ---
 
-## 🧪 Testes
+## 🧪 Testes Unitários
 
-A pasta `tests` está em fase de desenvolvimento.
+O projeto adota uma estratégia clara de testes unitários, organizada por domínio funcional, espelhando a estrutura da aplicação.
 
-Atualmente:
-- As funções foram testadas manualmente durante o desenvolvimento
-- Os testes unitários estão sendo implementados gradualmente
+### 📂 Organização dos testes
 
-Próximo passo:
-- Testes unitários por função
-- Testes de fluxo completo do sistema
+**tests/usuarios**
+
+Testes das funções de CRUD:
+- Cadastro
+- Atualização
+- Exclusão
+- Listagem
+
+**tests/validacoes**
+
+Testes específicos para:
+- CPF
+- Nome
+- Data de nascimento
+
+### 🎯 Estratégia
+
+- Cada função possui seu próprio arquivo de teste  
+- Validações são testadas de forma isolada  
+- Foco em:
+  - Casos de sucesso
+  - Casos de erro
+  - Regras de negócio
+  - Retornos esperados  
+
+Essa abordagem garante confiabilidade, facilidade de manutenção e escala futura do sistema.
 
 ---
 
 ## 🚀 Execução do Projeto
 
-Atualmente, o projeto é executado por meio da importação e chamada das funções diretamente em arquivos de teste.
+Atualmente, o projeto é executado por meio da importação direta das funções, com validação do comportamento via testes unitários.
 
-Com a implementação dos testes unitários, o fluxo de execução será centralizado na pasta `tests`, permitindo validar todo o comportamento do sistema de forma automatizada.
+O fluxo é intencionalmente simples, priorizando entendimento profundo do código antes da introdução de camadas como API ou framework.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **JavaScript**
-- **Git & GitHub**
+- JavaScript (ES6+)
+- Git & GitHub
 
 ---
 
 ## 📈 Evolução do Projeto
 
-Este projeto foi desenvolvido de forma incremental, priorizando:
+Projeto desenvolvido de forma incremental, com foco em:
 - Clareza de código
-- Organização estrutural
+- Arquitetura limpa
+- Testabilidade
 - Evolução contínua
-- Boas práticas de versionamento
+
+Base sólida para:
+- Integração com banco de dados
+- Criação de API REST
+- Introdução de frameworks backend
+- Expansão de testes
 
 ---
 
-## 📌 Observações
+## 📌 Observações Finais
 
-Este projeto não utiliza banco de dados nem frameworks propositalmente, mantendo o foco em **fundamentos de programação**, **arquitetura de código** e **lógica aplicada**.
+Este projeto não utiliza banco de dados ou frameworks propositalmente, mantendo o foco absoluto em:
+- Fundamentos
+- Lógica de negócio
+- Arquitetura
+- Qualidade de código
 
 ---
 
