@@ -2,6 +2,8 @@ const { testar } = require("../../src/utils/testar");
 const { criarResposta } = require("../../src/utils/criarRespostas");
 const { validaNome, ERROS_NOME } = require("../../src/validacoes/nome");
 
+console.log("===== INÍCIO DOS TESTES DE NOME =====")
+
 testar(
     'Nome válido simples',
     criarResposta({
@@ -81,3 +83,75 @@ testar(
     }),
     validaNome('João Pedro-Silva')
 );
+
+testar(
+    'Nome apenas com espaços',
+    criarResposta({
+        status: false,
+        code: 400,
+        message: ERROS_NOME.CAMPO_OBRIGATORIO
+    }),
+    validaNome('     ')
+);
+
+testar(
+    'Nome com apóstrofo',
+    criarResposta({
+        status: true,
+        code: 200,
+        message: null
+    }),
+    validaNome("D'Angelo")
+);
+
+testar(
+    'Nome no tamanho mínimo permitido (2 caracteres)',
+    criarResposta({
+        status: true,
+        code: 200,
+        message: null
+    }),
+    validaNome('Al')
+);
+
+testar(
+    'Nome no tamanho máximo permitido (100 caracteres)',
+    criarResposta({
+        status: true,
+        code: 200,
+        message: null
+    }),
+    validaNome('A'.repeat(100))
+);
+
+testar(
+    'Nome null',
+    criarResposta({
+        status: false,
+        code: 400,
+        message: ERROS_NOME.CAMPO_OBRIGATORIO
+    }),
+    validaNome(null)
+);
+
+testar(
+    'Nome undefined',
+    criarResposta({
+        status: false,
+        code: 400,
+        message: ERROS_NOME.CAMPO_OBRIGATORIO
+    }),
+    validaNome(undefined)
+);
+
+testar(
+    'Nome como número',
+    criarResposta({
+        status: false,
+        code: 400,
+        message: ERROS_NOME.CAMPO_OBRIGATORIO
+    }),
+    validaNome(12345)
+);
+
+console.log("===== FIM DOS TESTES DE NOME =====");
