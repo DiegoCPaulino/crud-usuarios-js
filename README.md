@@ -58,7 +58,7 @@ Trata-se de um projeto **educacional e técnico**, pensado para consolidar funda
 │   ├── usuarios
 │   │   ├── atualizarUsuario.js
 │   │   ├── cadastrarUsuario.js
-│   │   ├── deletaUsuario.js
+│   │   ├── deletarUsuario.js
 │   │   └── listarUsuarios.js
 │   │
 │   ├── utils
@@ -74,7 +74,16 @@ Trata-se de um projeto **educacional e técnico**, pensado para consolidar funda
 │   └── geradorId.js
 │
 ├── tests
-│   └── (testes unitários em desenvolvimento)
+│   ├── usuarios
+│   │   ├── atualizarUsuario.test.js
+│   │   ├── cadastrarUsuario.test.js
+│   │   ├── deletaUsuario.test.js
+│   │   └── listarUsuarios.test.js
+│   │
+│   └── validacoes
+│       ├── cpf.test.js
+│       └── dataNasc.test.js
+│       ├── nome.test.js
 │
 └── README.md
 ```
